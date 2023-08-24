@@ -5,9 +5,14 @@ import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.malov.criptotable.R
+import com.malov.criptotable.databinding.RecyclerViewItemBinding
 
+
+private lateinit var binding: RecyclerViewItemBinding
 
 class CurrenciesAdapter : BaseAdapter<CurrenciesAdapter.CurrencyViewHolder>() {
+
+
 
     //создает ViewHolder и инициализирует views для списка
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CurrencyViewHolder {
@@ -22,15 +27,16 @@ class CurrenciesAdapter : BaseAdapter<CurrenciesAdapter.CurrencyViewHolder>() {
             itemView.setOnClickListener {
             }
         }
+
         //привязываем элементы представления списка к RecyclerView и заполняем данными
         override fun bind(item: Any) {
             let {
                 item as Currency
-                Glide.with(view.context).load(item.image).into(view.ivCurrencyIcon)
-                view.tvCurrencySym.text = item.symbol
-                view.tvCurrencyName.text = item.name
-                view.tvCurrencyMarketCap.text = item.marketCap
-                view.tvCurrencyPrice.text = item.price.toString()
+                Glide.with(view.context).load(item.image).into(binding.ivCurrencyIcon)
+                binding.tvCurrencySym.text = item.symbol
+                binding.tvCurrencyName.text = item.name
+                binding.tvCurrencyMarketCap.text = item.marketCap
+                binding.tvCurrencyPrice.text = item.price.toString()
             }
         }
     }

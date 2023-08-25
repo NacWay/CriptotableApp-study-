@@ -1,5 +1,6 @@
 package com.malov.criptotable.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,7 @@ import com.malov.criptotable.R
 import com.malov.criptotable.databinding.RecyclerViewItemBinding
 
 
+@SuppressLint("StaticFieldLeak")
 private lateinit var binding: RecyclerViewItemBinding
 
 class CurrenciesAdapter : BaseAdapter<CurrenciesAdapter.CurrencyViewHolder>() {

@@ -36,6 +36,8 @@ android {
         jvmTarget = '1.8'
     }
 
+
+
 }
 
 dependencies {
@@ -56,6 +58,15 @@ dependencies {
     implementation 'com.google.dagger:dagger:2.28.3'
     kapt 'com.google.dagger:dagger-compiler:2.28.3'
     kapt "org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.4.2"
+
+    //Rx
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.0'
+
+    //chart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
+
 
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
 

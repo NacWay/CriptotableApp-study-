@@ -2,7 +2,7 @@ package com.malov.criptotable.mvp.contract
 
 import com.malov.criptotable.adapter.CurrenciesAdapter
 
-class CurrenciewsContract {
+class CurrenciesContract {
     interface View : BaseContract.View {
         fun addCurrency(currency: CurrenciesAdapter.Currency)
         fun notifyAdapter()

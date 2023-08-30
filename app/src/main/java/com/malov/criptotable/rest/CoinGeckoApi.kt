@@ -4,7 +4,7 @@ import android.database.Observable
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
-import java.util.Currency
+
 
 interface CoinGeckoApi {
     //запрос списка
